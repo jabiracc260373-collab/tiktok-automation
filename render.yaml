@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tiktok-automation
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: ./.playwright
+      - key: TIKTOK_API_KEY
+        sync: false
